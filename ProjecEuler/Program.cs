@@ -15,7 +15,7 @@ namespace ProjecEuler
             for (int i = 1; i <= runs; i++)
             { 
                 DateTime start = DateTime.Now;
-                _5.Solve();
+                _6.Solve();
                 TimeSpan elapsed = DateTime.Now - start;
                 time += elapsed.TotalSeconds;
 
