@@ -15,9 +15,11 @@ namespace ProjecEuler
             for (int i = 1; i <= runs; i++)
             { 
                 DateTime start = DateTime.Now;
-                _4.Solve();
+                _5.Solve();
                 TimeSpan elapsed = DateTime.Now - start;
                 time += elapsed.TotalSeconds;
+
+                Console.WriteLine("Time Elapsed: {0} seconds", elapsed.TotalSeconds);
             }
             Console.WriteLine("Average time over {0} runs: {1} seconds", runs, time / runs);
             Console.ReadLine();

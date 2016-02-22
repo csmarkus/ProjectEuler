@@ -18,17 +18,19 @@ namespace ProjecEuler
         {
             int largestPalindrome = int.MinValue;
 
-            for(int i = 999; i > 100 && i * 999 > largestPalindrome; i--)
+            for(int i = 999; i >= 100 && i * 999 > largestPalindrome; i--)
             {
                 for(int j = 999; j > i; j--)
                 {
                     int r = i * j;
                     if (r == reverseNumber(r))
+                    {
                         if (r > largestPalindrome)
                         {
                             largestPalindrome = r;
                             break;
                         }
+                    }
                 }
             }
 
