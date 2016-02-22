@@ -10,11 +10,11 @@ using System.Threading.Tasks;
  */
 
 
-namespace _1
+namespace ProjecEuler
 {
-    class Program
+    class _1
     {
-        static void Main(string[] args)
+        public static void Solve()
         {
             int belowNum = 1000;
             var sum = Enumerable.Range(1, belowNum - 1).Where(i => i % 5 == 0 || i % 3 == 0).Sum().ToString();
