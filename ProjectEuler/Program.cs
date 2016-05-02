@@ -12,9 +12,7 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            double time = 0.00;
             int runs = 1000;
-            string answer = "";
             int solved = 6;
 
             Console.WriteLine("Project Euler Solutions");
@@ -22,6 +20,9 @@ namespace ProjectEuler
 
             while (true)
             {
+                double time = 0.00;
+                string answer = "";
+
                 Console.Write("Project Euler Problem: ");
                 string problem = Console.ReadLine();
 
