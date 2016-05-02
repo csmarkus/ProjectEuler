@@ -13,7 +13,7 @@ namespace ProjectEuler
         static void Main(string[] args)
         {
             int runs = 1000;
-            int solved = 6;
+            int solved = 7;
 
             Console.WriteLine("Project Euler Solutions");
             Console.WriteLine("- Enter a problem number to run that problem\n- Enter 'answers' to list all the solved anwers\n- Enter 'exit' to close the application\n");
@@ -41,7 +41,7 @@ namespace ProjectEuler
                     TimeSpan elapsed = DateTime.Now - start;
                     time += elapsed.TotalSeconds;
 
-                    Console.Write("\r{0}%    ", ((float)i / (float)runs) * 100f);
+                    Console.Write("\r{0:P}      ", ((float)i / (float)runs));
 
                     if (i == 1) { answer = result; }
                 }
