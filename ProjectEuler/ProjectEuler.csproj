@@ -41,12 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="2.cs" />
-    <Compile Include="1.cs" />
-    <Compile Include="3.cs" />
-    <Compile Include="4.cs" />
-    <Compile Include="5.cs" />
-    <Compile Include="6.cs" />
+    <Compile Include="Problems\2.cs" />
+    <Compile Include="Problems\1.cs" />
+    <Compile Include="Problems\3.cs" />
+    <Compile Include="Problems\4.cs" />
+    <Compile Include="Problems\5.cs" />
+    <Compile Include="Problems\6.cs" />
+    <Compile Include="Problems\7.cs" />
     <Compile Include="ISolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

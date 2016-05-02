@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using ProjectEuler.Problems;
 
 namespace ProjectEuler
 {
@@ -16,6 +17,9 @@ namespace ProjectEuler
             string answer = "";
             int solved = 6;
 
+            Console.WriteLine("Project Euler Solutions");
+            Console.WriteLine("- Enter a problem number to run that problem\n- Enter 'answers' to list all the solved anwers\n- Enter 'exit' to close the application\n");
+
             while (true)
             {
                 Console.Write("Project Euler Problem: ");
@@ -23,6 +27,7 @@ namespace ProjectEuler
 
                 Console.WriteLine("");
 
+                if (problem.Length == 0) { continue; }
                 if (problem == "exit") { break; }
                 if (problem == "answers") { ListAnswers(solved); continue; }
 
@@ -47,7 +52,7 @@ namespace ProjectEuler
         public static ISolution CreateSolution(string problem)
         {
             Assembly assembly = typeof(ISolution).Assembly;
-            Type type = assembly.GetType("ProjectEuler._" + problem);
+            Type type = assembly.GetType("ProjectEuler.Problems._" + problem);
 
             var solution = Activator.CreateInstance(type) as ISolution;
 

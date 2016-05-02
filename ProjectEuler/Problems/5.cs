@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
  */
 
-namespace ProjectEuler
+namespace ProjectEuler.Problems
 {
     class _5 : ISolution
     {

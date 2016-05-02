@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * What is the largest prime factor of the number 600851475143 ?
  */
 
-namespace ProjectEuler
+namespace ProjectEuler.Problems
 {
     class _3 : ISolution
     {

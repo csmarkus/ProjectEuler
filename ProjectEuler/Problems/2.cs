@@ -19,7 +19,7 @@ using System.Threading.Tasks;
  * http://stackoverflow.com/questions/8628698/create-fibonacci-series-using-lambda-operator
  */
 
-namespace ProjectEuler
+namespace ProjectEuler.Problems
 {
     class _2 : ISolution
     {

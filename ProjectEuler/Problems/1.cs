@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  */
 
 
-namespace ProjectEuler
+namespace ProjectEuler.Problems
 {
     class _1 : ISolution
     {

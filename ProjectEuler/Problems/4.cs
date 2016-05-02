@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  * Find the largest palindrome made from the product of two 3-digit numbers.
  */
 
-namespace ProjectEuler
+namespace ProjectEuler.Problems
 {
     class _4 : ISolution
     {
