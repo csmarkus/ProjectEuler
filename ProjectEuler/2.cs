@@ -19,15 +19,15 @@ using System.Threading.Tasks;
  * http://stackoverflow.com/questions/8628698/create-fibonacci-series-using-lambda-operator
  */
 
-namespace ProjecEuler
+namespace ProjectEuler
 {
-    class _2
+    class _2 : ISolution
     {
-        public static void Solve()
+        public string Solve()
         {
             long sum = Fibonacci().TakeWhile(x => x < 4000000L).Where(x => x % 2L == 0L).Sum();
 
-            Console.WriteLine(sum.ToString());
+            return sum.ToString();
         }
 
         private static IEnumerable<long> Fibonacci()

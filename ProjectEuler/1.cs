@@ -10,15 +10,15 @@ using System.Threading.Tasks;
  */
 
 
-namespace ProjecEuler
+namespace ProjectEuler
 {
-    class _1
+    class _1 : ISolution
     {
-        public static void Solve()
+        public string Solve()
         {
             int belowNum = 1000;
             var sum = Enumerable.Range(1, belowNum - 1).Where(i => i % 5 == 0 || i % 3 == 0).Sum().ToString();
-            Console.WriteLine(sum);
+            return sum.ToString();
         }
     }
 }

@@ -14,11 +14,15 @@ using System.Threading.Tasks;
  * Honeslty this one could be done with simple math, but that isn't the point here. I did find that checking if i % j == 0 took far longer than i % j != 0. Like 3-4 seconds longer. Lesson learned? 
  */
 
-namespace ProjecEuler
+/*
+ * How did this ever work? This is entirely wrong, so how did I get the answer to this with how absolutely wrong this is?! I need to redo this one...
+ */
+
+namespace ProjectEuler
 {
-    class _5
+    class _5 : ISolution
     {
-        public static void Solve()
+        public string Solve()
         {
             int result = int.MinValue;
 
@@ -32,7 +36,7 @@ namespace ProjecEuler
                     {
                         break;
                     }
-                    else 
+                    else
                     {
                         found = true;
                         result = i;
@@ -40,7 +44,7 @@ namespace ProjecEuler
                 }
             }
 
-            Console.WriteLine(result);
+            return result.ToString();
         }
     }
 }

@@ -10,11 +10,11 @@ using System.Threading.Tasks;
  * Find the largest palindrome made from the product of two 3-digit numbers.
  */
 
-namespace ProjecEuler
+namespace ProjectEuler
 {
-    class _4
+    class _4 : ISolution
     {
-        public static void Solve()
+        public string Solve()
         {
             int largestPalindrome = int.MinValue;
 
@@ -34,7 +34,7 @@ namespace ProjecEuler
                 }
             }
 
-            Console.WriteLine(largestPalindrome);
+            return largestPalindrome.ToString();
         }
 
         public static int reverseNumber(int n)

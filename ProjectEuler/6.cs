@@ -18,11 +18,11 @@ using System.Threading.Tasks;
  * Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
  */
 
-namespace ProjecEuler
+namespace ProjectEuler
 {
-    class _6
+    class _6 : ISolution
     {
-        public static void Solve()
+        public string Solve()
         {
             int sumOfSquares = 0;
             int squareOfSums = 0;
@@ -37,7 +37,7 @@ namespace ProjecEuler
 
             int result = squareOfSums - sumOfSquares;
 
-            Console.WriteLine(result);
+            return result.ToString();
         }
     }
 }

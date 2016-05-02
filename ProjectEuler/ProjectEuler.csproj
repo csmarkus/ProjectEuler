@@ -7,8 +7,8 @@
     <ProjectGuid>{C87F444A-31C2-4D91-9D4E-4ED7F3FD0A35}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjecEuler</RootNamespace>
-    <AssemblyName>ProjecEuler</AssemblyName>
+    <RootNamespace>ProjectEuler</RootNamespace>
+    <AssemblyName>ProjectEuler</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,6 +47,7 @@
     <Compile Include="4.cs" />
     <Compile Include="5.cs" />
     <Compile Include="6.cs" />
+    <Compile Include="ISolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
