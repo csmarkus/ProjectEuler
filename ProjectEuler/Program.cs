@@ -16,14 +16,11 @@ namespace ProjectEuler
             int solved = 8;
 
             Console.WriteLine("Project Euler Solutions");
-            Console.WriteLine("- Enter a problem number to run that problem\n- Enter 'answers' to list all the solved anwers\n- Enter 'exit' to close the application\n");
+            Console.WriteLine("- Enter a problem number to run that problem\n- Enter 'answers' to list all the solved anwers\n- Enter 'exit' to close the application\n- Enter 'all' to run all the problems");
 
             while (true)
             {
-                double time = 0.00;
-                string answer = "";
-
-                Console.Write("Project Euler Problem: ");
+                Console.Write("\n\nProject Euler Problem: ");
                 string problem = Console.ReadLine();
 
                 Console.WriteLine("");
@@ -33,25 +30,43 @@ namespace ProjectEuler
                 if (problem.Length == 0) { continue; }
                 if (problem == "exit") { break; }
                 if (problem == "answers") { ListAnswers(solved); continue; }
+                if (problem == "all") { RunAll(solved); continue; }
                 if (!int.TryParse(problem, out number)) { continue; }
                 if (int.Parse(problem) > solved) { continue; }
 
-                Console.Write("0%");
-
-                for (int i = 1; i <= runs; i++)
-                {
-                    DateTime start = DateTime.Now;
-                    string result = CreateSolution(problem).Solve();
-                    TimeSpan elapsed = DateTime.Now - start;
-                    time += elapsed.TotalSeconds;
-
-                    Console.Write("\r{0:P}      ", ((float)i / (float)runs));
-
-                    if (i == 1) { answer = result; }
-                }
-                Console.WriteLine("\n\nAnswer: {0}", answer);
-                Console.WriteLine("Average time over {0} runs: {1} seconds\n", runs, time / runs);
+                Run(problem);
             }
+        }
+
+        private static void RunAll(int count)
+        {
+            for (int i = 1; i <= count; i++)
+            {
+                Run(i.ToString());
+                Console.Write("\n");
+            }
+        }
+
+        private static void Run(string problem, int runs = 1000)
+        {
+            double time = 0.00;
+            string answer = "";
+
+            Console.Write("Problem {0}\t0%", problem);
+
+            for (int i = 1; i <= runs; i++)
+            {
+                DateTime start = DateTime.Now;
+                string result = CreateSolution(problem).Solve();
+                TimeSpan elapsed = DateTime.Now - start;
+                time += elapsed.TotalSeconds;
+
+                Console.Write("\rProblem {1}\t{0:P}      ", ((float)i / (float)runs), problem);
+
+                if (i == 1) { answer = result; }
+            }
+            Console.Write("Answer: {0}\t", answer);
+            Console.Write("Average time over {0} runs: {1} seconds", runs, time / runs);
         }
 
         public static ISolution CreateSolution(string problem)

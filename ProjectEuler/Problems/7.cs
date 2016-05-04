@@ -19,7 +19,7 @@ namespace ProjectEuler.Problems
             int primeCount = 0;
             int n = 0;
 
-            for (int i = 1; primeCount < 10002; i++)
+            for (int i = 1; primeCount < 10002; i += 2)
             {
                 if (Utils.IsPrime(i)) { primeCount++; n = i; }
             }
