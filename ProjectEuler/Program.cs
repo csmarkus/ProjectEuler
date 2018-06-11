@@ -13,7 +13,7 @@ namespace ProjectEuler
         static void Main(string[] args)
         {
             int runs = 1000;
-            int solved = 8;
+            int solved = 9;
 
             Console.WriteLine("Project Euler Solutions");
             Console.WriteLine("- Enter a problem number to run that problem\n- Enter 'answers' to list all the solved anwers\n- Enter 'exit' to close the application\n- Enter 'all' to run all the problems");
@@ -22,8 +22,6 @@ namespace ProjectEuler
             {
                 Console.Write("\n\nProject Euler Problem: ");
                 string problem = Console.ReadLine();
-
-                Console.WriteLine("");
 
                 int number;
 
@@ -34,7 +32,10 @@ namespace ProjectEuler
                 if (!int.TryParse(problem, out number)) { continue; }
                 if (int.Parse(problem) > solved) { continue; }
 
-                Run(problem);
+                Console.Write("Runs: ");
+                string temp = Console.ReadLine();
+
+                if (int.TryParse(temp, out runs)) { Run(problem, runs); }
             }
         }
 
@@ -52,7 +53,7 @@ namespace ProjectEuler
             double time = 0.00;
             string answer = "";
 
-            Console.Write("Problem {0}\t0%", problem);
+            Console.Write("\nProblem {0}\t0%", problem);
 
             for (int i = 1; i <= runs; i++)
             {
